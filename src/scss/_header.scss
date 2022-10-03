@@ -47,6 +47,16 @@
     overflow: hidden;
     position: relative;
     will-change: transform;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        z-index: 100;
+        width: 100%;
+        height: calc(var(--index)*10);
+        background-image: url("../img/ground.png");
+    }
 
     &__base {
         transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
