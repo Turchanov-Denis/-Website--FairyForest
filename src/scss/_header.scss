@@ -16,6 +16,7 @@
         will-change: transform;
         margin-top: calc(var(--index) * -1.5);
         color: #f4f3dd;
+        text-shadow: 0 0 15px rgba(255, 254, 187, 0.345);
     }
 
     &__caption {

@@ -109,6 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   will-change: transform;
   margin-top: calc(var(--index) * -1.5);
   color: #f4f3dd;
+  text-shadow: 0 0 15px rgba(255, 254, 187, 0.345);
 }
 .layer__caption {
   font-size: calc(var(--index) * 1.2);
