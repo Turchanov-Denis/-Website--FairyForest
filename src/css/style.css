@@ -181,21 +181,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-article__content {
   max-width: 50vw;
+  margin-top: -20%;
 }
 .main-article__title {
   font-size: calc(var(--index) * 2);
   letter-spacing: calc(var(--index) / 5.5);
   font-weight: 900;
   transform: translate3d(0, calc(var(--scrollTop) / 6), 0);
+  will-change: transform;
 }
 .main-article__text {
   margin-top: calc(var(--index) * 1.5);
   font-size: calc(var(--index) * 1);
   transform: translate3d(0, calc(var(--scrollTop) / 6), 0);
+  will-change: transform;
 }
 
 .copy {
-  transform: translate3d(0, calc(var(--scrollTop) / 6), 0);
-  font-size: calc(var(--index) * 0.9);
+  position: absolute;
+  bottom: calc(var(--index) * 1);
+  will-change: transform;
+  font-size: calc(var(--index) * 0.6);
   margin-top: calc(var(--index) * 1.5);
+  letter-spacing: calc(var(--index) / 9.5);
+  opacity: 0.45;
 }
