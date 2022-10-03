@@ -20,7 +20,7 @@ body {
 
 :root {
   --index: calc(1vh + 1vw);
-  --transition: transform .75s cubic-bezier(.075, 0.5, 0, 1);
+  --transition: transform 0.75s ease-out;
 }
 
 /*Обнуление*/
@@ -146,16 +146,16 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   display: block;
   position: absolute;
-  bottom: 0px;
+  bottom: -20px;
   z-index: 100;
   width: 100%;
   height: calc(var(--index) * 10);
   background-image: url("../img/ground.png");
+  background-repeat: no-repeat;
 }
 .layers__base {
   transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
   z-index: 0;
-  transition: var(--transition);
 }
 .layers__middle {
   transform: translate3d(0, calc(var(--scrollTop) / 3.5), 0);
@@ -163,7 +163,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .layers__front {
   transform: translate3d(0, calc(var(--scrollTop) / 6), 0);
-  top: -30px;
   transition: var(--transition);
 }
 
