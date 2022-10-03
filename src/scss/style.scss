@@ -8,30 +8,22 @@
     font-weight: 900;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: rgb(24, 23, 23);
     color: rgb(255, 255, 255);
     font-family: "Railway", sans-serif;
+
+    
+
 }
 
 :root {
-    --index: calc(1vh + 1vw)
+    --index: calc(1vh + 1vw);
+    --transition: transform .75s cubic-bezier(.075, 0.5, 0, 1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @import '_nullstyle.scss';
 @import '_header.scss';

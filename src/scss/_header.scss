@@ -17,6 +17,7 @@
         margin-top: calc(var(--index) * -1.5);
         color: #f4f3dd;
         text-shadow: 0 0 15px rgba(255, 254, 187, 0.345);
+        transition: var(--transition);
     }
 
     &__caption {
@@ -61,16 +62,19 @@
     &__base {
         transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
         z-index: 0;
+        transition: var(--transition);
     }
 
 
     &__middle {
         transform: translate3d(0, calc(var(--scrollTop)/3.5), 0);
+        transition: var(--transition);
         
     }
 
     &__front {
         transform: translate3d(0, calc(var(--scrollTop)/6), 0);
         top: -30px;
+        transition: var(--transition);
     }
 }

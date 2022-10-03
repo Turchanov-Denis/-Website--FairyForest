@@ -8,6 +8,10 @@
   src: url("../fonts/raleway-black.woff2");
   font-weight: 900;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(24, 23, 23);
   color: rgb(255, 255, 255);
@@ -15,7 +19,8 @@ body {
 }
 
 :root {
-  --index: calc(1vh + 1vw) ;
+  --index: calc(1vh + 1vw);
+  --transition: transform .75s cubic-bezier(.075, 0.5, 0, 1);
 }
 
 /*Обнуление*/
@@ -110,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: calc(var(--index) * -1.5);
   color: #f4f3dd;
   text-shadow: 0 0 15px rgba(255, 254, 187, 0.345);
+  transition: var(--transition);
 }
 .layer__caption {
   font-size: calc(var(--index) * 1.2);
@@ -149,13 +155,16 @@ h1, h2, h3, h4, h5, h6 {
 .layers__base {
   transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
   z-index: 0;
+  transition: var(--transition);
 }
 .layers__middle {
   transform: translate3d(0, calc(var(--scrollTop) / 3.5), 0);
+  transition: var(--transition);
 }
 .layers__front {
   transform: translate3d(0, calc(var(--scrollTop) / 6), 0);
   top: -30px;
+  transition: var(--transition);
 }
 
 .lock {
@@ -176,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: #f4f3dd;
   min-width: 100%;
 }
 .main-article__content {
@@ -189,12 +198,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   transform: translate3d(0, calc(var(--scrollTop) / 6), 0);
   will-change: transform;
+  transition: var(--transition);
 }
 .main-article__text {
   margin-top: calc(var(--index) * 1.5);
   font-size: calc(var(--index) * 1);
   transform: translate3d(0, calc(var(--scrollTop) / 6), 0);
   will-change: transform;
+  transition: var(--transition);
 }
 
 .copy {
