@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Railway";
+    src: url('../fonts/raleway-regular.woff2');
+}
+@font-face {
+    font-family: "Railway";
+    src: url('../fonts/raleway-black.woff2');
+    font-weight: 900;
+}
+
+body {
+    background-color: rgb(24, 23, 23);
+    color: rgb(255, 255, 255);
+    font-family: "Railway", sans-serif;
+}
+
+:root {
+    --index: calc(1vh + 1vw)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import '_nullstyle.scss';
+@import '_header.scss';
+@import '_common.scss';
+@import '_article.scss';

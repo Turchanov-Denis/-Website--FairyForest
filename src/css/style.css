@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Railway";
+  src: url("../fonts/raleway-regular.woff2");
+}
+@font-face {
+  font-family: "Railway";
+  src: url("../fonts/raleway-black.woff2");
+  font-weight: 900;
+}
+body {
+  background-color: rgb(24, 23, 23);
+  color: rgb(255, 255, 255);
+  font-family: "Railway", sans-serif;
+}
+
+:root {
+  --index: calc(1vh + 1vw) ;
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.layer__header {
+  position: absolute;
+  z-index: 1;
+  text-transform: uppercase;
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  will-change: transform;
+  margin-top: calc(var(--index) * -1.5);
+  color: #f4f3dd;
+}
+.layer__caption {
+  font-size: calc(var(--index) * 1.2);
+  letter-spacing: calc(var(--index) / 3.5);
+  font-weight: 900;
+}
+.layer__title {
+  font-size: calc(var(--index) * 2.5);
+  letter-spacing: calc(var(--index) / 2.7);
+  font-weight: 900;
+}
+
+.main-header {
+  position: relative;
+}
+
+.layers {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  will-change: transform;
+}
+.layers__base {
+  transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+  z-index: 0;
+}
+.layers__middle {
+  transform: translate3d(0, calc(var(--scrollTop) / 3.5), 0);
+}
+.layers__front {
+  transform: translate3d(0, calc(var(--scrollTop) / 6), 0);
+  top: -30px;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.ibg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-article {
+  min-height: 100vh;
+}
